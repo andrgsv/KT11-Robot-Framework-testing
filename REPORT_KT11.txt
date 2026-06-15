@@ -1,0 +1,31 @@
+КТ №11. Robot Framework + ATDD/BDD
+
+Цель:
+Написать 10 тестовых случаев через Robot Framework с использованием BDD-подхода.
+
+Тестируемое приложение:
+Wikipedia — https://www.wikipedia.org/
+
+Реализовано:
+1. Открытие главной страницы.
+2. Проверка поля поиска.
+3. Поиск Selenium WebDriver.
+4. Поиск Python programming.
+5. Поиск Robot Framework.
+6. Поиск Software testing.
+7. Проверка языковых блоков.
+8. Смена языка поиска на русский.
+9. Проверка адаптивности.
+10. Негативная проверка пустого запроса.
+
+Инструменты:
+- Robot Framework
+- SeleniumLibrary
+- Selenium WebDriver
+- Python
+
+Команда запуска:
+robot -d results tests/wikipedia_bdd_tests.robot
+
+Ожидаемый результат:
+10 tests, 10 passed, 0 failed

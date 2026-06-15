@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-06-16T02:36:13.090711" rpa="false" schemaversion="5">
+<suite id="s1" name="Wikipedia Bdd Tests" source="C:\Users\adiag\Documents\IThub\3 курс - 2 семестр\МТВП Шпатович\КТ11\tests\wikipedia_bdd_tests.robot">
+<test id="s1-t1" name="TC01 Open Wikipedia Home Page" line="8">
+<kw name="Given User Opens Wikipedia Home Page" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-16T02:36:13.339993" level="INFO">Opening browser 'chrome' to base url 'https://www.wikipedia.org/'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-06-16T02:36:13.339789" elapsed="2.103868"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-06-16T02:36:15.443890" elapsed="0.029799"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${SEARCH_INPUT}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-06-16T02:36:15.473874" elapsed="0.007360"/>
+</kw>
+<status status="PASS" start="2026-06-16T02:36:13.339291" elapsed="2.142041"/>
+</kw>
+<kw name="Then Wikipedia Home Page Should Be Opened" owner="keywords">
+<kw name="Title Should Contain">
+<msg time="2026-06-16T02:36:15.483401" level="FAIL">No keyword with name 'Title Should Contain' found. Did you mean:
+    SeleniumLibrary.Table Should Contain</msg>
+<arg>Wikipedia</arg>
+<status status="FAIL" start="2026-06-16T02:36:15.483358" elapsed="0.000094">No keyword with name 'Title Should Contain' found. Did you mean:
+    SeleniumLibrary.Table Should Contain</status>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<arg>${SEARCH_INPUT}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="NOT RUN" start="2026-06-16T02:36:15.483565" elapsed="0.000024"/>
+</kw>
+<status status="FAIL" start="2026-06-16T02:36:15.481648" elapsed="0.002055">No keyword with name 'Title Should Contain' found. Did you mean:
+    SeleniumLibrary.Table Should Contain</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-06-16T02:36:15.484011" elapsed="1.104261"/>
+</kw>
+<doc>Проверка открытия главной страницы Wikipedia.</doc>
+<tag>bdd</tag>
+<tag>smoke</tag>
+<status status="FAIL" start="2026-06-16T02:36:13.338186" elapsed="3.250346">No keyword with name 'Title Should Contain' found. Did you mean:
+    SeleniumLibrary.Table Should Contain</status>
+</test>
+<test id="s1-t2" name="TC02 Search Field Is Visible" line="14">
+<kw name="Given User Opens Wikipedia Home Page" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-16T02:36:16.590031" level="INFO">Opening browser 'chrome' to base url 'https://www.wikipedia.org/'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-06-16T02:36:16.589859" elapsed="1.046976"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-06-16T02:36:17.637066" elapsed="0.017654"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${SEARCH_INPUT}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-06-16T02:36:17.654861" elapsed="0.007292"/>
+</kw>
+<status status="PASS" start="2026-06-16T02:36:16.589653" elapsed="1.072582"/>
+</kw>
+<kw name="Then Main Search Field Should Be Visible" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SEARCH_INPUT}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-16T02:36:17.662728" elapsed="0.071892"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-06-16T02:36:17.742603" level="INFO">Element 'id:searchInput' is displayed.</msg>
+<arg>${SEARCH_INPUT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-16T02:36:17.734825" elapsed="0.007902"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${SEARCH_INPUT}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-06-16T02:36:17.742880" elapsed="0.011917"/>
+</kw>
+<status status="PASS" start="2026-06-16T02:36:17.662526" elapsed="0.092345"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-06-16T02:36:17.755130" elapsed="1.090778"/>
+</kw>
+<doc>Проверка отображения и доступности поля поиска.</doc>
+<tag>bdd</tag>
+<tag>ui</tag>
+<status status="PASS" start="2026-06-16T02:36:16.589143" elapsed="2.256959"/>
+</test>
+<test id="s1-t3" name="TC03 Successful Search For Selenium WebDriver" line="20">
+<kw name="Given User Opens Wikipedia Home Page" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-16T02:36:18.847796" level="INFO">Opening browser 'chrome' to base url 'https://www.wikipedia.org/'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-06-16T02:36:18.847605" elapsed="1.120007"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-06-16T02:36:19.967856" elapsed="0.019806"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${SEARCH_INPUT}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-06-16T02:36:19.987831" elapsed="0.006744"/>
+</kw>
+<status status="PASS" start="2026-06-16T02:36:18.847213" elapsed="1.147439"/>
+</kw>
+<kw name="When User Searches For" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SEARCH_INPUT}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-16T02:36:19.995296" elapsed="0.008481"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-16T02:36:20.004447" level="INFO">Typing text 'Selenium WebDriver' into text field 'id:searchInput'.</msg>
+<arg>${SEARCH_INPUT}</arg>
+<arg>${query}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-16T02:36:20.004155" elapsed="0.069504"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2026-06-16T02:36:20.074192" level="INFO">Sending key(s) ('ENTER',) to id:searchInput element.</msg>
+<msg time="2026-06-16T02:36:20.433911" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2026-06-16T02:36:20.433996" level="INFO">Releasing special key ENTER.</msg>
+<arg>${SEARCH_INPUT}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2026-06-16T02:36:20.073876" elapsed="1.604425"/>
+</kw>
+<arg>${QUERY_SELENIUM}</arg>
+<status status="PASS" start="2026-06-16T02:36:19.994997" elapsed="1.683417"/>
+</kw>
+<kw name="Then Search Results Should Contain" owner="keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${RESULT_HEADING}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-06-16T02:36:21.679251" elapsed="0.088459"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-06-16T02:36:21.804187" level="INFO">Current page contains text 'Selenium'.</msg>
+<arg>${text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-06-16T02:36:21.767932" elapsed="0.036341"/>
+</kw>
+<arg>Selenium</arg>
+<status status="PASS" start="2026-06-16T02:36:21.678896" elapsed="0.125466"/>
+</kw>
+<kw name="Then Article Page Should Be Loaded" owner="keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${CONTENT}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-06-16T02:36:21.805029" elapsed="0.005926"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-06-16T02:36:21.817814" level="INFO">Element 'id:content' is displayed.</msg>
+<arg>${CONTENT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-16T02:36:21.811069" elapsed="0.006791"/>
+</kw>
+<status status="PASS" start="2026-06-16T02:36:21.804700" elapsed="0.013215"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-06-16T02:36:21.818168" elapsed="1.113339"/>
+</kw>
+<doc>Проверка поиска по запросу Selenium WebDriver.</doc>
+<tag>bdd</tag>
+<tag>functional</tag>
+<tag>search</tag>
+<status status="PASS" start="2026-06-16T02:36:18.846713" elapsed="4.084999"/>
+</test>
+<test id="s1-t4" name="TC04 Successful Search For Python" line="28">
+<kw name="Given User Opens Wikipedia Home Page" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-16T02:36:22.933103" level="INFO">Opening browser 'chrome' to base url 'https://www.wikipedia.org/'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-06-16T02:36:22.932936" elapsed="1.016025"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-06-16T02:36:23.949137" elapsed="0.029774"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${SEARCH_INPUT}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-06-16T02:36:23.979111" elapsed="0.007308"/>
+</kw>
+<status status="PASS" start="2026-06-16T02:36:22.932735" elapsed="1.053764"/>
+</kw>
+<kw name="When User Searches For" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SEARCH_INPUT}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-16T02:36:23.987104" elapsed="0.033319"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-16T02:36:24.020813" level="INFO">Typing text 'Python programming' into text field 'id:searchInput'.</msg>
+<arg>${SEARCH_INPUT}</arg>
+<arg>${query}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-16T02:36:24.020578" elapsed="0.045385"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2026-06-16T02:36:24.066426" level="INFO">Sending key(s) ('ENTER',) to id:searchInput element.</msg>
+<msg time="2026-06-16T02:36:24.409930" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2026-06-16T02:36:24.410021" level="INFO">Releasing special key ENTER.</msg>
+<arg>${SEARCH_INPUT}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2026-06-16T02:36:24.066150" elapsed="1.644221"/>
+</kw>
+<arg>${QUERY_PYTHON}</arg>
+<status status="PASS" start="2026-06-16T02:36:23.986805" elapsed="1.723672"/>
+</kw>
+<kw name="Then Search Results Should Contain" owner="keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${RESULT_HEADING}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-06-16T02:36:25.711029" elapsed="0.006755"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-06-16T02:36:25.734241" level="INFO">Current page contains text 'Python'.</msg>
+<arg>${text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-06-16T02:36:25.717926" elapsed="0.016388"/>
+</kw>
+<arg>Python</arg>
+<status status="PASS" start="2026-06-16T02:36:25.710790" elapsed="0.023588"/>
+</kw>
+<kw name="Then Article Page Should Be Loaded" owner="keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${CONTENT}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-06-16T02:36:25.735006" elapsed="0.005771"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-06-16T02:36:25.747757" level="INFO">Element 'id:content' is displayed.</msg>
+<arg>${CONTENT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-16T02:36:25.740907" elapsed="0.006954"/>
+</kw>
+<status status="PASS" start="2026-06-16T02:36:25.734720" elapsed="0.013202"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-06-16T02:36:25.748175" elapsed="1.104104"/>
+</kw>
+<doc>Проверка поиска по запросу Python programming.</doc>
+<tag>bdd</tag>
+<tag>functional</tag>
+<tag>search</tag>
+<status status="PASS" start="2026-06-16T02:36:22.932188" elapsed="3.920291"/>
+</test>
+<test id="s1-t5" name="TC05 Successful Search For Robot Framework" line="36">
+<kw name="Given User Opens Wikipedia Home Page" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-16T02:36:26.853808" level="INFO">Opening browser 'chrome' to base url 'https://www.wikipedia.org/'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-06-16T02:36:26.853618" elapsed="1.034197"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-06-16T02:36:27.888068" elapsed="0.026864"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${SEARCH_INPUT}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-06-16T02:36:27.915135" elapsed="0.007284"/>
+</kw>
+<status status="PASS" start="2026-06-16T02:36:26.853378" elapsed="1.069127"/>
+</kw>
+<kw name="When User Searches For" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SEARCH_INPUT}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-16T02:36:27.923149" elapsed="0.008639"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-16T02:36:27.932110" level="INFO">Typing text 'Robot Framework' into text field 'id:searchInput'.</msg>
+<arg>${SEARCH_INPUT}</arg>
+<arg>${query}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-16T02:36:27.931903" elapsed="0.067217"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2026-06-16T02:36:27.999594" level="INFO">Sending key(s) ('ENTER',) to id:searchInput element.</msg>
+<msg time="2026-06-16T02:36:28.344187" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2026-06-16T02:36:28.344261" level="INFO">Releasing special key ENTER.</msg>
+<arg>${SEARCH_INPUT}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2026-06-16T02:36:27.999313" elapsed="1.719806"/>
+</kw>
+<arg>${QUERY_ROBOT}</arg>
+<status status="PASS" start="2026-06-16T02:36:27.922837" elapsed="1.796425"/>
+</kw>
+<kw name="Then Search Results Should Contain" owner="keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${RESULT_HEADING}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-06-16T02:36:29.719874" elapsed="0.036255"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-06-16T02:36:29.773003" level="INFO">Current page contains text 'Robot'.</msg>
+<arg>${text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-06-16T02:36:29.756353" elapsed="0.016711"/>
+</kw>
+<arg>Robot</arg>
+<status status="PASS" start="2026-06-16T02:36:29.719612" elapsed="0.053521"/>
+</kw>
+<kw name="Then Article Page Should Be Loaded" owner="keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${CONTENT}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-06-16T02:36:29.773631" elapsed="0.005704"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-06-16T02:36:29.787329" level="INFO">Element 'id:content' is displayed.</msg>
+<arg>${CONTENT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-16T02:36:29.779451" elapsed="0.007927"/>
+</kw>
+<status status="PASS" start="2026-06-16T02:36:29.773427" elapsed="0.014031"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-06-16T02:36:29.787713" elapsed="1.105021"/>
+</kw>
+<doc>Проверка поиска по запросу Robot Framework.</doc>
+<tag>bdd</tag>
+<tag>functional</tag>
+<tag>search</tag>
+<status status="PASS" start="2026-06-16T02:36:26.852899" elapsed="4.040032"/>
+</test>
+<test id="s1-t6" name="TC06 Successful Search For Software Testing" line="44">
+<kw name="Given User Opens Wikipedia Home Page" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-16T02:36:30.894122" level="INFO">Opening browser 'chrome' to base url 'https://www.wikipedia.org/'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-06-16T02:36:30.893956" elapsed="1.088198"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-06-16T02:36:31.982339" elapsed="0.024688"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${SEARCH_INPUT}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-06-16T02:36:32.007245" elapsed="0.007447"/>
+</kw>
+<status status="PASS" start="2026-06-16T02:36:30.893749" elapsed="1.121020"/>
+</kw>
+<kw name="When User Searches For" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SEARCH_INPUT}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-16T02:36:32.015416" elapsed="0.008373"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-16T02:36:32.024077" level="INFO">Typing text 'Software testing' into text field 'id:searchInput'.</msg>
+<arg>${SEARCH_INPUT}</arg>
+<arg>${query}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-16T02:36:32.023887" elapsed="0.088602"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2026-06-16T02:36:32.112942" level="INFO">Sending key(s) ('ENTER',) to id:searchInput element.</msg>
+<msg time="2026-06-16T02:36:32.455423" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2026-06-16T02:36:32.455493" level="INFO">Releasing special key ENTER.</msg>
+<arg>${SEARCH_INPUT}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2026-06-16T02:36:32.112654" elapsed="2.072562"/>
+</kw>
+<arg>${QUERY_QA}</arg>
+<status status="PASS" start="2026-06-16T02:36:32.015103" elapsed="2.170224"/>
+</kw>
+<kw name="Then Search Results Should Contain" owner="keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${RESULT_HEADING}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-06-16T02:36:34.185884" elapsed="0.006401"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-06-16T02:36:34.207125" level="INFO">Current page contains text 'Software'.</msg>
+<arg>${text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-06-16T02:36:34.192386" elapsed="0.014791"/>
+</kw>
+<arg>Software</arg>
+<status status="PASS" start="2026-06-16T02:36:34.185645" elapsed="0.021592"/>
+</kw>
+<kw name="Then Article Page Should Be Loaded" owner="keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${CONTENT}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-06-16T02:36:34.207741" elapsed="0.005687"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-06-16T02:36:34.221624" level="INFO">Element 'id:content' is displayed.</msg>
+<arg>${CONTENT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-16T02:36:34.213520" elapsed="0.008151"/>
+</kw>
+<status status="PASS" start="2026-06-16T02:36:34.207524" elapsed="0.014199"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-06-16T02:36:34.221956" elapsed="1.107042"/>
+</kw>
+<doc>Проверка поиска по запросу Software testing.</doc>
+<tag>bdd</tag>
+<tag>functional</tag>
+<tag>search</tag>
+<status status="PASS" start="2026-06-16T02:36:30.893294" elapsed="4.435936"/>
+</test>
+<test id="s1-t7" name="TC07 Language Blocks Are Displayed" line="52">
+<kw name="Given User Opens Wikipedia Home Page" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-16T02:36:35.330561" level="INFO">Opening browser 'chrome' to base url 'https://www.wikipedia.org/'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-06-16T02:36:35.330256" elapsed="1.102109"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-06-16T02:36:36.432822" elapsed="0.022238"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${SEARCH_INPUT}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-06-16T02:36:36.455239" elapsed="0.007777"/>
+</kw>
+<status status="PASS" start="2026-06-16T02:36:35.330054" elapsed="1.133066"/>
+</kw>
+<kw name="Then Language Blocks Should Be Visible" owner="keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${LANGUAGE_BLOCKS}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-06-16T02:36:36.463742" elapsed="0.006465"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2026-06-16T02:36:36.474314" level="INFO">${count} = 10</msg>
+<var>${count}</var>
+<arg>${LANGUAGE_BLOCKS}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2026-06-16T02:36:36.470341" elapsed="0.004159"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${count} &gt;= 6</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2026-06-16T02:36:36.474601" elapsed="0.000457"/>
+</kw>
+<status status="PASS" start="2026-06-16T02:36:36.463488" elapsed="0.011631"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-06-16T02:36:36.475377" elapsed="1.090352"/>
+</kw>
+<doc>Проверка отображения основных языковых блоков на главной странице.</doc>
+<tag>bdd</tag>
+<tag>ui</tag>
+<status status="PASS" start="2026-06-16T02:36:35.329593" elapsed="2.236336"/>
+</test>
+<test id="s1-t8" name="TC08 Search Language Can Be Changed To Russian" line="58">
+<kw name="Given User Opens Wikipedia Home Page" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-16T02:36:37.567162" level="INFO">Opening browser 'chrome' to base url 'https://www.wikipedia.org/'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-06-16T02:36:37.566991" elapsed="0.920986"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-06-16T02:36:38.488221" elapsed="0.022546"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${SEARCH_INPUT}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-06-16T02:36:38.510987" elapsed="0.007387"/>
+</kw>
+<status status="PASS" start="2026-06-16T02:36:37.566767" elapsed="0.951707"/>
+</kw>
+<kw name="When User Selects Russian Language" owner="keywords">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-06-16T02:36:38.519313" level="INFO">Selecting options from selection list 'id:searchLanguage' by value ru.</msg>
+<arg>${SEARCH_LANGUAGE}</arg>
+<arg>ru</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-06-16T02:36:38.519057" elapsed="0.026783"/>
+</kw>
+<status status="PASS" start="2026-06-16T02:36:38.518798" elapsed="0.027126"/>
+</kw>
+<kw name="Then Russian Language Should Be Selected" owner="keywords">
+<kw name="Get Selected List Value" owner="SeleniumLibrary">
+<msg time="2026-06-16T02:36:38.844137" level="INFO">${value} = ru</msg>
+<var>${value}</var>
+<arg>${SEARCH_LANGUAGE}</arg>
+<doc>Returns the value of selected option from selection list ``locator``.</doc>
+<status status="PASS" start="2026-06-16T02:36:38.546425" elapsed="0.297757"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${value}</arg>
+<arg>ru</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-06-16T02:36:38.844360" elapsed="0.000350"/>
+</kw>
+<status status="PASS" start="2026-06-16T02:36:38.546180" elapsed="0.298606"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-06-16T02:36:38.845048" elapsed="1.093540"/>
+</kw>
+<doc>Проверка смены языка поиска на русский.</doc>
+<tag>bdd</tag>
+<tag>language</tag>
+<tag>ui</tag>
+<status status="PASS" start="2026-06-16T02:36:37.566283" elapsed="2.372521"/>
+</test>
+<test id="s1-t9" name="TC09 Mobile View Keeps Search Available" line="65">
+<kw name="Given User Opens Wikipedia Home Page" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-16T02:36:39.940214" level="INFO">Opening browser 'chrome' to base url 'https://www.wikipedia.org/'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-06-16T02:36:39.940042" elapsed="1.102521"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-06-16T02:36:41.042782" elapsed="0.022888"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${SEARCH_INPUT}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-06-16T02:36:41.065830" elapsed="0.007471"/>
+</kw>
+<status status="PASS" start="2026-06-16T02:36:39.939826" elapsed="1.133562"/>
+</kw>
+<kw name="When User Changes Window Size To Mobile" owner="keywords">
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>375</arg>
+<arg>812</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2026-06-16T02:36:41.073989" elapsed="0.360364"/>
+</kw>
+<status status="PASS" start="2026-06-16T02:36:41.073715" elapsed="0.360746"/>
+</kw>
+<kw name="Then Search Field Should Stay Available In Mobile View" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SEARCH_INPUT}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-16T02:36:41.435057" elapsed="0.008826"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-06-16T02:36:41.450646" level="INFO">Element 'id:searchInput' is displayed.</msg>
+<arg>${SEARCH_INPUT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-16T02:36:41.443987" elapsed="0.006710"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${SEARCH_INPUT}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-06-16T02:36:41.450792" elapsed="0.011349"/>
+</kw>
+<status status="PASS" start="2026-06-16T02:36:41.434801" elapsed="0.027403"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-06-16T02:36:41.462466" elapsed="1.086328"/>
+</kw>
+<doc>Проверка адаптивности: поле поиска доступно в мобильном размере окна.</doc>
+<tag>bdd</tag>
+<tag>responsive</tag>
+<status status="PASS" start="2026-06-16T02:36:39.939264" elapsed="2.609712"/>
+</test>
+<test id="s1-t10" name="TC10 Empty Search Does Not Break Page" line="72">
+<kw name="Given User Opens Wikipedia Home Page" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-16T02:36:42.550425" level="INFO">Opening browser 'chrome' to base url 'https://www.wikipedia.org/'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-06-16T02:36:42.550243" elapsed="1.130088"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-06-16T02:36:43.680665" elapsed="0.022906"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${SEARCH_INPUT}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-06-16T02:36:43.703755" elapsed="0.007192"/>
+</kw>
+<status status="PASS" start="2026-06-16T02:36:42.550000" elapsed="1.161051"/>
+</kw>
+<kw name="When User Enters Empty Search Query" owner="keywords">
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${SEARCH_INPUT}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-16T02:36:43.711508" elapsed="0.023208"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2026-06-16T02:36:43.735228" level="INFO">Sending key(s) ('ENTER',) to id:searchInput element.</msg>
+<msg time="2026-06-16T02:36:44.152187" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2026-06-16T02:36:44.152260" level="INFO">Releasing special key ENTER.</msg>
+<arg>${SEARCH_INPUT}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2026-06-16T02:36:43.734878" elapsed="1.530678"/>
+</kw>
+<status status="PASS" start="2026-06-16T02:36:43.711324" elapsed="1.554437"/>
+</kw>
+<kw name="Then User Should Stay On Search Page Without Critical Error" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SEARCH_INPUT}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-16T02:36:45.266346" elapsed="0.115529"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-06-16T02:36:45.389831" level="INFO">Element 'id:searchInput' is displayed.</msg>
+<arg>${SEARCH_INPUT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-16T02:36:45.382061" elapsed="0.007844"/>
+</kw>
+<status status="PASS" start="2026-06-16T02:36:45.266129" elapsed="0.123866"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-06-16T02:36:45.390293" elapsed="1.096559"/>
+</kw>
+<doc>Негативная проверка: пустой поисковый запрос не ломает страницу.</doc>
+<tag>bdd</tag>
+<tag>negative</tag>
+<status status="PASS" start="2026-06-16T02:36:42.549445" elapsed="3.937603"/>
+</test>
+<doc>КТ №11. 10 тестовых случаев через Robot Framework в стиле ATDD/BDD.
+Тестируемое веб-приложение: Wikipedia.</doc>
+<status status="FAIL" start="2026-06-16T02:36:13.091840" elapsed="33.395810"/>
+</suite>
+<statistics>
+<total>
+<stat pass="9" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="9" fail="1" skip="0">bdd</stat>
+<stat pass="4" fail="0" skip="0">functional</stat>
+<stat pass="1" fail="0" skip="0">language</stat>
+<stat pass="1" fail="0" skip="0">negative</stat>
+<stat pass="1" fail="0" skip="0">responsive</stat>
+<stat pass="4" fail="0" skip="0">search</stat>
+<stat pass="0" fail="1" skip="0">smoke</stat>
+<stat pass="3" fail="0" skip="0">ui</stat>
+</tag>
+<suite>
+<stat name="Wikipedia Bdd Tests" id="s1" pass="9" fail="1" skip="0">Wikipedia Bdd Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
